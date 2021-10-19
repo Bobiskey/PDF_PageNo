@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="itext7" Version="7.1.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\..\IText7\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\..\IText7\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core">
+      <HintPath>..\..\..\IText7\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.barcodes">
+      <HintPath>..\..\..\IText7\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.font_asian">
+      <HintPath>..\..\..\IText7\itext.font_asian.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms">
+      <HintPath>..\..\..\IText7\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.hyph">
+      <HintPath>..\..\..\IText7\itext.hyph.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io">
+      <HintPath>..\..\..\IText7\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel">
+      <HintPath>..\..\..\IText7\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout">
+      <HintPath>..\..\..\IText7\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa">
+      <HintPath>..\..\..\IText7\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdftest">
+      <HintPath>..\..\..\IText7\itext.pdftest.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign">
+      <HintPath>..\..\..\IText7\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser">
+      <HintPath>..\..\..\IText7\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg">
+      <HintPath>..\..\..\IText7\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\IText7\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
