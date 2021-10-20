@@ -59,5 +59,23 @@ namespace PDF_PageNo.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C:\PDFCreate\Store\Finished.pdf.
+        /// </summary>
+        internal static string _dest {
+            get {
+                return ResourceManager.GetString("_dest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C:\PDFCreate\Store\Combined.PDF.
+        /// </summary>
+        internal static string _src {
+            get {
+                return ResourceManager.GetString("_src", resourceCulture);
+            }
+        }
     }
 }

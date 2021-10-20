@@ -1,8 +1,7 @@
 {
   "profiles": {
     "PDF_PageNo": {
-      "commandName": "Project",
-      "commandLineArgs": "\"C:/Scripts/Finish/Combined/MPM-VA4.pdf\" \"C:/Scripts/Finish/Combined/AMPM-CPOS.pdf\";"
+      "commandName": "Project"
     }
   }
 }
