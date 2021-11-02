@@ -15,6 +15,8 @@ namespace PDF_PageNo
         {
             static String _src;
             static String _dest;
+            static String _left;
+            static String _bottom;
             static bool _help;
             static void Main(string[] args)
 
@@ -23,6 +25,8 @@ namespace PDF_PageNo
                 {
                     { "s|SRC", "Enter Source FIle", arg => _src = arg },
                     { "d|DEST", "Enter Destination FIle", arg => _dest = arg },
+                    { "l|Left", "Pixels in from the Left side", arg => _left = arg},
+                    { "b|Bottom", "Pixels up from the Bottom of the page", arg => _bottom = arg},
                     { "h|Help", "Display Help Section", arg => _help = arg != null}
                 };
 
@@ -32,8 +36,10 @@ namespace PDF_PageNo
                     _help = true;
                 }
 
-                if (string.IsNullOrEmpty(_dest)) { _dest = "C:\\PDFCreate\\Finished.PDF"; } else { _dest = extras[1]; }
                 if (string.IsNullOrEmpty(_src)) { _src = "C:\\PDFCreate\\Store\\Combined.PDF"; } else { _src = extras[0]; }
+                if (string.IsNullOrEmpty(_dest)) { _dest = "C:\\PDFCreate\\Finished.PDF"; } else { _dest = extras[1]; }
+                if (string.IsNullOrEmpty(_left)) { _left = "20"; } else { _left = extras[2]; }
+                if (string.IsNullOrEmpty(_bottom)) { _bottom = "20"; } else { _bottom = extras[3]; }
 
                 if (_help) {
                     options.WriteOptionDescriptions(Console.Out);
@@ -54,8 +60,10 @@ namespace PDF_PageNo
                     int numberOfPages = pdfDoc.GetNumberOfPages();
                     for (int i = 1; i <= numberOfPages; i++)
                     {
-                        doc.ShowTextAligned(new Paragraph("Page " + i + " of " + numberOfPages),
-                                20, 20, i, TextAlignment.LEFT, VerticalAlignment.BOTTOM, 0);
+                    float lf1 = float.Parse(_left);
+                    float bt1 = float.Parse(_bottom);
+                    doc.ShowTextAligned(new Paragraph("Page " + i + " of " + numberOfPages),
+                                lf1, bt1, i, TextAlignment.LEFT, VerticalAlignment.BOTTOM, 0);
                     }
                     doc.Close();
             }

@@ -1,7 +1,8 @@
 {
   "profiles": {
     "PDF_PageNo": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "-s \"C:\\Scripts\\Test.pdf\" -d \"C:\\Scripts\\Dest.pdf\" -l 30 -b 300"
     }
   }
 }
